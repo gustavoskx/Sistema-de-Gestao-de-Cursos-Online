@@ -13,7 +13,7 @@ public class CursoDeProgramacao extends Curso{
     }
 
     public void setLinguagem(String linguagem) {
-        if (linguagem == null || linguagem.isEmpty()) {
+        if (linguagem == null || linguagem.trim().isEmpty()) {
             System.out.println("Linguagem inválida. A linguagem não pode ser nula ou vazia.");
         }else{
             this.linguagem = linguagem;

@@ -18,7 +18,7 @@ public abstract class Curso {
     }
 
     public void setTitulo(String titulo) {
-        if (titulo == null || titulo.isEmpty()) {
+        if (titulo == null || titulo.trim().isEmpty()) {
             System.out.println("Título inválido. O título não pode ser nulo ou vazio.");
         }else{
             this.titulo = titulo;
@@ -30,7 +30,7 @@ public abstract class Curso {
     }
 
     public void setIntrutor(String intrutor) {
-        if (intrutor == null || intrutor.isEmpty()) {
+        if (intrutor == null || intrutor.trim().isEmpty()) {
             System.out.println("Instrutor inválido. O instrutor não pode ser nulo ou vazio.");
         }else{
             this.intrutor = intrutor;

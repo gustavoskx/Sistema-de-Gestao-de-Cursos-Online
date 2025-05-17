@@ -13,7 +13,7 @@ public class CursoDeDesign extends Curso {
     }
 
     public void setFerramenta(String ferramenta) {
-        if (ferramenta == null || ferramenta.isEmpty()) {
+        if (ferramenta == null || ferramenta.trim().isEmpty()) {
             System.out.println("Ferramenta inválida. A ferramenta não pode ser nula ou vazia.");
         } else {
             this.ferramenta = ferramenta;
