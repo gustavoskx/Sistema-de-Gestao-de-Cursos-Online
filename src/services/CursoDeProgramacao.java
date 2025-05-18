@@ -22,20 +22,40 @@ public class CursoDeProgramacao extends Curso{
 
     @Override
     public void mostrarDados() {
-        System.out.println("Curso Cadastrado: {" +
-                            "\n     Título: " + titulo +
-                            "\n     Instrutor: " + intrutor +
-                            "\n     Carga Horária: " + cargaHoraria +
-                            "\n     Preço por Hora: " + precoPorHora +
-                            "\n     Linguagem: " + linguagem +
-                            "\n }");
-    }
-    @Override
-    public void calcularCusto(){
-        if(cargaHoraria > 50){
-            System.out.println("    O custo do curso de programação é: " + (cargaHoraria * precoPorHora * 0.9) + " (10% de desconto aplicado)");
-        }else{
-            System.out.println("    O custo do curso de programação é: " + (cargaHoraria * precoPorHora));
+        double custoTotal = calcularCusto();
+        System.out.println("Cadastro de Curso: {");
+        System.out.println("Curso: " + titulo);
+        System.out.println("Tipo: Programação");
+        System.out.println("Linguagem: " + linguagem);
+        System.out.println("Carga Horária: " + cargaHoraria + " horas");
+        System.out.println("Preço por Hora: R$ " + precoPorHora);
+        if (cargaHoraria > 50) {
+            System.out.println("Resultado:");
+            System.out.println("Custo Total: R$ " + custoTotal + " (com desconto de 10%).");
+        } else {
+            System.out.println("Resultado:");
+            System.out.println("Custo Total: R$ " + custoTotal + ".");
         }
+        System.out.println("}");
+    }
+
+    @Override
+    public void gerarRelatorio() {
+        double custoTotal = calcularCusto();
+        System.out.println("Relatório: {");
+        System.out.println("Título: " + titulo);
+        System.out.println("Instrutor: " + intrutor);
+        System.out.println("Linguagem: " + linguagem);
+        System.out.println("Carga Horária: " + cargaHoraria + "h");
+        System.out.println("Custo Total: R$ " + custoTotal);
+        System.out.println("}");
+    }
+
+    @Override
+    public double calcularCusto(){
+        if(cargaHoraria > 50) {
+            return cargaHoraria * precoPorHora * 0.9;
+        }
+            return cargaHoraria * precoPorHora;
     }
 }

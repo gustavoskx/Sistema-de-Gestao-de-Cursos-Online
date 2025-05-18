@@ -12,11 +12,13 @@ public class Main {
         cursos.add(new CursoDeProgramacao("Python Avançado", "Maria", 60, 70.0, "Python"));
         cursos.add(new CursoDeDesign("UI/UX Design", "João", 25, 80.0, "Figma"));
 
-        System.out.println("\n--- Relatório de Cursos Cadastrados ---");
+        System.out.println("---------------------------------------");
         for (Curso curso : cursos) {
+            System.out.println("===============================");
             curso.mostrarDados();
-            curso.calcularCusto();
             System.out.println();
+            curso.gerarRelatorio();
+            System.out.println("===============================");
         }
         System.out.println("---------------------------------------\n");
     }

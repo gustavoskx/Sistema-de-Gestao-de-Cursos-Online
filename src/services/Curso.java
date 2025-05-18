@@ -62,5 +62,6 @@ public abstract class Curso {
     }
 
     public abstract void mostrarDados();
-    public abstract void calcularCusto();
+    public abstract double calcularCusto();
+    public abstract void gerarRelatorio();
 }
